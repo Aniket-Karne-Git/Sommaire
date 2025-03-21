@@ -16,8 +16,7 @@ const NavLink = ({
   className?: string;
 }) => {
   const pathName = usePathname();
-  const isActive =
-    pathName === href || (href !== "/" && pathName.startsWith(href));
+  const isActive = pathName === href || pathName.startsWith(href);
   return (
     <Link
       href={href}
